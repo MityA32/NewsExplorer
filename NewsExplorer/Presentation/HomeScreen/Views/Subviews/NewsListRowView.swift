@@ -8,11 +8,19 @@
 import SwiftUI
 
 struct NewsListRowView: View {
+    let pieceOfNews: PieceOfNewsModel
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            Group {
+                Text(pieceOfNews.title)
+                    .font(.title3)
+                Text(pieceOfNews.description)
+                    .font(.subheadline)
+            }
+            .minimumScaleFactor(0.5)
+            .frame(maxWidth: .infinity, alignment: .leading)
+        }
+        
     }
-}
-
-#Preview {
-    NewsListRowView()
 }

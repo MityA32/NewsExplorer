@@ -8,11 +8,16 @@
 import SwiftUI
 
 struct HomeScreenView: View {
+    @ObservedObject var viewModel: NewsViewModel
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            ControlPanelView(viewModel: viewModel)
+                .frame(height: 44)
+            
+            NewsListView(viewModel: viewModel)
+            
+            
+        }
     }
-}
-
-#Preview {
-    HomeScreenView()
 }

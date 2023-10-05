@@ -8,14 +8,22 @@
 import SwiftUI
 
 struct NewsListView: View {
-    let fetcher: Fetcher
+    @ObservedObject var viewModel: NewsViewModel
+    @State private var searchText = ""
     
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-        
+        NavigationStack {
+            List(searchResults, id: \.title) {
+                NewsListRowView(pieceOfNews: $0)
+            }
+            .navigationTitle("News")
+            .navigationBarTitleDisplayMode(.inline)
+        }
+        .searchable(text: $searchText)
+    }
+    
+    var searchResults: [PieceOfNewsModel] {
+        guard !searchText.isEmpty else { return viewModel.getAllNews() }
+        return viewModel.getAllNews().filter { $0.title.localizedCaseInsensitiveContains(searchText) || $0.description.localizedCaseInsensitiveContains(searchText) }
     }
 }
-//
-//#Preview {
-//    NewsListView()
-//}

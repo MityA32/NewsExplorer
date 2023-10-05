@@ -6,3 +6,8 @@
 //
 
 import Foundation
+
+protocol Repository: NSObject {
+    associatedtype T
+    func getPortion(topic: String, number: Int, sortByOption: SortByOption) async -> Result<[T], Error>
+}

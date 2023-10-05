@@ -8,11 +8,34 @@
 import SwiftUI
 
 struct ControlPanelView: View {
+    @ObservedObject var viewModel: NewsViewModel
+    
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        HStack {
+            Button {
+                
+            } label: {
+                Image(systemName: "calendar")
+            }
+            Spacer()
+            Menu {
+                ForEach(SortByOption.allCases) { option in
+                    Button {
+                        viewModel.getNews(by: option)
+                    } label: {
+                        Text("\(option.title)")
+                    }
+                }
+            } label: {
+                Button {
+                    
+                } label: {
+                    Image(systemName: "arrow.up.arrow.down")
+                }
+            }
+            
+        }
+        .padding()
     }
-}
-
-#Preview {
-    ControlPanelView()
 }
