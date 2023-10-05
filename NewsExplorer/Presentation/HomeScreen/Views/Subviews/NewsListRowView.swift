@@ -13,14 +13,13 @@ struct NewsListRowView: View {
     var body: some View {
         VStack {
             Group {
-                Text(pieceOfNews.title)
+                Text(pieceOfNews.title ?? "Untitled")
                     .font(.title3)
-                Text(pieceOfNews.description)
+                Text(pieceOfNews.description ?? "No description")
                     .font(.subheadline)
             }
             .minimumScaleFactor(0.5)
             .frame(maxWidth: .infinity, alignment: .leading)
         }
-        
     }
 }

@@ -14,10 +14,7 @@ struct HomeScreenView: View {
         VStack {
             ControlPanelView(viewModel: viewModel)
                 .frame(height: 44)
-            
             NewsListView(viewModel: viewModel)
-            
-            
         }
     }
 }

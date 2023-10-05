@@ -7,239 +7,47 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "DF6C89D5-9B9C-4436-8AAD-413DBBF1108D"
+            uuid = "33B25136-680C-491A-8690-DB906079D5D0"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "NewsExplorer/Data/Network/Services/DataFetcher.swift"
+            filePath = "NewsExplorer/Data/Repository/NewsRepository.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "20"
-            endingLineNumber = "20"
-            landmarkName = "fetchData(of:with:)"
+            startingLineNumber = "41"
+            endingLineNumber = "41"
+            landmarkName = "init(fetcher:)"
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "DF6C89D5-9B9C-4436-8AAD-413DBBF1108D - cd2c53532cb2eeaf"
+                  uuid = "33B25136-680C-491A-8690-DB906079D5D0 - e13b6879df00fd99"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "(3) suspend resume partial function for NewsExplorer.DataFetcher.fetchData&lt;&#x3c4;_0_0 where &#x3c4;_0_0: Swift.Decodable&gt;(of: &#x3c4;_0_0.Type, with: Foundation.URL) async -&gt; Swift.Result&lt;&#x3c4;_0_0, Swift.Error&gt;"
+                  symbolName = "(2) suspend resume partial function for closure #1 @Sendable () async -&gt; () in closure #1 (NewsExplorer.NewsRequestConfig) -&gt; () in NewsExplorer.NewsRepository.init(fetcher: NewsExplorer.Fetcher) -&gt; NewsExplorer.NewsRepository"
                   moduleName = "NewsExplorer"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/dmytrohetman/projects/NewsExplorer/NewsExplorer/Data/Network/Services/DataFetcher.swift"
+                  urlString = "file:///Users/dmytrohetman/projects/NewsExplorer/NewsExplorer/Data/Repository/NewsRepository.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "20"
-                  endingLineNumber = "20"
-                  offsetFromSymbolStart = "2516">
+                  startingLineNumber = "38"
+                  endingLineNumber = "38"
+                  offsetFromSymbolStart = "135">
                </Location>
                <Location
-                  uuid = "DF6C89D5-9B9C-4436-8AAD-413DBBF1108D - 4db5fd2539ae4cae"
+                  uuid = "33B25136-680C-491A-8690-DB906079D5D0 - 8cf2e621bea1c77f"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "(4) suspend resume partial function for NewsExplorer.DataFetcher.fetchData&lt;&#x3c4;_0_0 where &#x3c4;_0_0: Swift.Decodable&gt;(of: &#x3c4;_0_0.Type, with: Foundation.URL) async -&gt; Swift.Result&lt;&#x3c4;_0_0, Swift.Error&gt;"
+                  symbolName = "(3) suspend resume partial function for closure #1 @Sendable () async -&gt; () in closure #1 (NewsExplorer.NewsRequestConfig) -&gt; () in NewsExplorer.NewsRepository.init(fetcher: NewsExplorer.Fetcher) -&gt; NewsExplorer.NewsRepository"
                   moduleName = "NewsExplorer"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/dmytrohetman/projects/NewsExplorer/NewsExplorer/Data/Network/Services/DataFetcher.swift"
+                  urlString = "file:///Users/dmytrohetman/projects/NewsExplorer/NewsExplorer/Data/Repository/NewsRepository.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "20"
-                  endingLineNumber = "20"
-                  offsetFromSymbolStart = "2070">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "95EBAB86-E02B-4321-9BB7-0B3A1707FA10"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "NewsExplorer/Data/Network/Services/DataFetcher.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "23"
-            endingLineNumber = "23"
-            landmarkName = "fetchData(of:with:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "95EBAB86-E02B-4321-9BB7-0B3A1707FA10 - cd2c53532cb2ed0a"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(3) suspend resume partial function for NewsExplorer.DataFetcher.fetchData&lt;&#x3c4;_0_0 where &#x3c4;_0_0: Swift.Decodable&gt;(of: &#x3c4;_0_0.Type, with: Foundation.URL) async -&gt; Swift.Result&lt;&#x3c4;_0_0, Swift.Error&gt;"
-                  moduleName = "NewsExplorer"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/dmytrohetman/projects/NewsExplorer/NewsExplorer/Data/Network/Services/DataFetcher.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "23"
-                  endingLineNumber = "23"
-                  offsetFromSymbolStart = "3658">
-               </Location>
-               <Location
-                  uuid = "95EBAB86-E02B-4321-9BB7-0B3A1707FA10 - 4db5fd2539ae4f0b"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(4) suspend resume partial function for NewsExplorer.DataFetcher.fetchData&lt;&#x3c4;_0_0 where &#x3c4;_0_0: Swift.Decodable&gt;(of: &#x3c4;_0_0.Type, with: Foundation.URL) async -&gt; Swift.Result&lt;&#x3c4;_0_0, Swift.Error&gt;"
-                  moduleName = "NewsExplorer"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/dmytrohetman/projects/NewsExplorer/NewsExplorer/Data/Network/Services/DataFetcher.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "23"
-                  endingLineNumber = "23"
-                  offsetFromSymbolStart = "3191">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "983FA102-1447-4CFD-B0AB-11AFA4FC33E5"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "NewsExplorer/Data/Network/Services/DataFetcher.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "26"
-            endingLineNumber = "26"
-            landmarkName = "fetchData(of:with:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "983FA102-1447-4CFD-B0AB-11AFA4FC33E5 - cd2c53532cb2ed69"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(3) suspend resume partial function for NewsExplorer.DataFetcher.fetchData&lt;&#x3c4;_0_0 where &#x3c4;_0_0: Swift.Decodable&gt;(of: &#x3c4;_0_0.Type, with: Foundation.URL) async -&gt; Swift.Result&lt;&#x3c4;_0_0, Swift.Error&gt;"
-                  moduleName = "NewsExplorer"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/dmytrohetman/projects/NewsExplorer/NewsExplorer/Data/Network/Services/DataFetcher.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "26"
-                  endingLineNumber = "26"
-                  offsetFromSymbolStart = "4788">
-               </Location>
-               <Location
-                  uuid = "983FA102-1447-4CFD-B0AB-11AFA4FC33E5 - 4db5fd2539ae4f68"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(4) suspend resume partial function for NewsExplorer.DataFetcher.fetchData&lt;&#x3c4;_0_0 where &#x3c4;_0_0: Swift.Decodable&gt;(of: &#x3c4;_0_0.Type, with: Foundation.URL) async -&gt; Swift.Result&lt;&#x3c4;_0_0, Swift.Error&gt;"
-                  moduleName = "NewsExplorer"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/dmytrohetman/projects/NewsExplorer/NewsExplorer/Data/Network/Services/DataFetcher.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "26"
-                  endingLineNumber = "26"
-                  offsetFromSymbolStart = "4318">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "29860C3A-E1BA-4704-9818-8366BE189C43"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "NewsExplorer/Data/Network/Services/DataFetcher.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "29"
-            endingLineNumber = "29"
-            landmarkName = "fetchData(of:with:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "29860C3A-E1BA-4704-9818-8366BE189C43 - cd2c53532cb2edc4"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(3) suspend resume partial function for NewsExplorer.DataFetcher.fetchData&lt;&#x3c4;_0_0 where &#x3c4;_0_0: Swift.Decodable&gt;(of: &#x3c4;_0_0.Type, with: Foundation.URL) async -&gt; Swift.Result&lt;&#x3c4;_0_0, Swift.Error&gt;"
-                  moduleName = "NewsExplorer"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/dmytrohetman/projects/NewsExplorer/NewsExplorer/Data/Network/Services/DataFetcher.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "29"
-                  endingLineNumber = "29"
-                  offsetFromSymbolStart = "5621">
-               </Location>
-               <Location
-                  uuid = "29860C3A-E1BA-4704-9818-8366BE189C43 - 4db5fd2539ae4fc5"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(4) suspend resume partial function for NewsExplorer.DataFetcher.fetchData&lt;&#x3c4;_0_0 where &#x3c4;_0_0: Swift.Decodable&gt;(of: &#x3c4;_0_0.Type, with: Foundation.URL) async -&gt; Swift.Result&lt;&#x3c4;_0_0, Swift.Error&gt;"
-                  moduleName = "NewsExplorer"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/dmytrohetman/projects/NewsExplorer/NewsExplorer/Data/Network/Services/DataFetcher.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "29"
-                  endingLineNumber = "29"
-                  offsetFromSymbolStart = "5142">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "7713795B-3DF0-4BF3-95EF-5DD70DB9E11D"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "NewsExplorer/Data/Network/Services/DataFetcher.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "17"
-            endingLineNumber = "17"
-            landmarkName = "fetchData(of:with:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "7713795B-3DF0-4BF3-95EF-5DD70DB9E11D - cd2c53532cb2ee50"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(3) suspend resume partial function for NewsExplorer.DataFetcher.fetchData&lt;&#x3c4;_0_0 where &#x3c4;_0_0: Swift.Decodable&gt;(of: &#x3c4;_0_0.Type, with: Foundation.URL) async -&gt; Swift.Result&lt;&#x3c4;_0_0, Swift.Error&gt;"
-                  moduleName = "NewsExplorer"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/dmytrohetman/projects/NewsExplorer/NewsExplorer/Data/Network/Services/DataFetcher.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "17"
-                  endingLineNumber = "17"
-                  offsetFromSymbolStart = "1460">
-               </Location>
-               <Location
-                  uuid = "7713795B-3DF0-4BF3-95EF-5DD70DB9E11D - 4db5fd2539ae4c51"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(4) suspend resume partial function for NewsExplorer.DataFetcher.fetchData&lt;&#x3c4;_0_0 where &#x3c4;_0_0: Swift.Decodable&gt;(of: &#x3c4;_0_0.Type, with: Foundation.URL) async -&gt; Swift.Result&lt;&#x3c4;_0_0, Swift.Error&gt;"
-                  moduleName = "NewsExplorer"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/dmytrohetman/projects/NewsExplorer/NewsExplorer/Data/Network/Services/DataFetcher.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "17"
-                  endingLineNumber = "17"
-                  offsetFromSymbolStart = "1038">
+                  startingLineNumber = "39"
+                  endingLineNumber = "39"
+                  offsetFromSymbolStart = "144">
                </Location>
             </Locations>
          </BreakpointContent>

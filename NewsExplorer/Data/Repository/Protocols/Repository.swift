@@ -9,5 +9,5 @@ import Foundation
 
 protocol Repository: NSObject {
     associatedtype T
-    func getPortion(topic: String, number: Int, sortByOption: SortByOption) async -> Result<[T], Error>
+    func getPortion(topic: String, from startDate: Date?, to endDate: Date?, sortByOption: SortByOption, pageNumber: Int) async -> Result<[T], Error>
 }

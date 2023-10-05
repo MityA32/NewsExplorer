@@ -6,3 +6,12 @@
 //
 
 import Foundation
+
+struct NewsRequestConfig {
+    let topic: String
+    let startDate: Date?
+    let endDate: Date?
+    let sortOption: SortByOption
+    var pageNumber: Int
+    
+}
