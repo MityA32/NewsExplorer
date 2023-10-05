@@ -8,11 +8,14 @@
 import SwiftUI
 
 struct NewsListView: View {
+    let fetcher: Fetcher
+    
     var body: some View {
         Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        
     }
 }
-
-#Preview {
-    NewsListView()
-}
+//
+//#Preview {
+//    NewsListView()
+//}
