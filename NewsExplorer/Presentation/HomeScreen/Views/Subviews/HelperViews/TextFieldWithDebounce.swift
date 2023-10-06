@@ -22,7 +22,6 @@ struct TextFieldWithDebounce: View {
                 .background(
                     Rectangle()
                         .foregroundStyle(Color(UIColor.systemGray6))
-                        .clipShape(.rect(bottomLeadingRadius: 10, bottomTrailingRadius: 10))
                 )
                 .onReceive(textObserver.$debouncedText) {
                     viewModel.changeNews(forNew: $0)

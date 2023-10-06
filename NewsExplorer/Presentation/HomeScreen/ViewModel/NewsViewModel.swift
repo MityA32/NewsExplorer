@@ -22,6 +22,16 @@ final class NewsViewModel: ObservableObject {
     @Published var isDataMissing = false
     @Published var startDate: Date?
     @Published var endDate: Date?
+    var formattedStartDate: String {
+        startDate?.formatted(date: .abbreviated, time: .omitted) ?? ""
+    }
+    var formattedEndDate: String {
+        endDate?.formatted(date: .abbreviated, time: .omitted) ?? ""
+    }
+    
+    var formattedDate: String {
+        "\(formattedStartDate) - \(formattedEndDate)"
+    }
     
     private var newsRequest: NewsRequest = .initial
     private var currentTopic = "popular"
@@ -35,10 +45,7 @@ final class NewsViewModel: ObservableObject {
         self.newsRepository = newsRepository
         
         inCustomNewsConfig
-            .sink(
-                receiveValue: { [weak self] config in
-                    self?.newsRepository.inCustomNewsConfig.send(config)
-            })
+            .subscribe(newsRepository.inCustomNewsConfig)
             .store(in: &cancellables)
         
         newsRepository

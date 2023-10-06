@@ -16,7 +16,7 @@ struct HomeScreenView: View {
     
     var body: some View {
         VStack {
-            NavigationStack {
+            NavigationView {
                 VStack {
                     NewsListView(viewModel: viewModel)
                         .navigationTitle("News")
@@ -35,7 +35,6 @@ struct HomeScreenView: View {
                 Alert(title: Text("Data is missing"),
                       message: Text("Probably free calls from API are over :("))
             }
-            
         }
     }
     
@@ -48,7 +47,6 @@ struct HomeScreenView: View {
             }
             .sheet(isPresented: $isDateSelectionShown, content: {
                 SetDateOfNewsView(viewModel: viewModel)
-                    .presentationDetents([.medium])
             })
        }
     }

@@ -27,6 +27,8 @@
 		935EA0902ACF5D83003EB789 /* SetDateOfNewsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 935EA08F2ACF5D83003EB789 /* SetDateOfNewsView.swift */; };
 		935EA0932ACF685A003EB789 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 935EA0922ACF685A003EB789 /* Date+Extension.swift */; };
 		935EA0952ACF875D003EB789 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 935EA0942ACF875D003EB789 /* String+Extension.swift */; };
+		9372380B2AD0302B002B79A6 /* URLComponents+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9372380A2AD0302B002B79A6 /* URLComponents+Extension.swift */; };
+		9372380D2AD03076002B79A6 /* NewsApiQueryItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9372380C2AD03076002B79A6 /* NewsApiQueryItems.swift */; };
 		93728DDA2AD00C2800D99303 /* TextFieldWithDebounce.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93728DD92AD00C2800D99303 /* TextFieldWithDebounce.swift */; };
 		93728DDD2AD00F7100D99303 /* TextFieldObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93728DDC2AD00F7100D99303 /* TextFieldObserver.swift */; };
 /* End PBXBuildFile section */
@@ -53,6 +55,8 @@
 		935EA08F2ACF5D83003EB789 /* SetDateOfNewsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetDateOfNewsView.swift; sourceTree = "<group>"; };
 		935EA0922ACF685A003EB789 /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
 		935EA0942ACF875D003EB789 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		9372380A2AD0302B002B79A6 /* URLComponents+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLComponents+Extension.swift"; sourceTree = "<group>"; };
+		9372380C2AD03076002B79A6 /* NewsApiQueryItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsApiQueryItems.swift; sourceTree = "<group>"; };
 		93728DD92AD00C2800D99303 /* TextFieldWithDebounce.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldWithDebounce.swift; sourceTree = "<group>"; };
 		93728DDC2AD00F7100D99303 /* TextFieldObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldObserver.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -165,6 +169,7 @@
 			children = (
 				935159BD2ACDF65F00458601 /* News+Decodable.swift */,
 				935159CF2ACE162E00458601 /* SortByOption.swift */,
+				9372380C2AD03076002B79A6 /* NewsApiQueryItems.swift */,
 			);
 			path = DataMapping;
 			sourceTree = "<group>";
@@ -245,6 +250,7 @@
 			children = (
 				935EA0922ACF685A003EB789 /* Date+Extension.swift */,
 				935EA0942ACF875D003EB789 /* String+Extension.swift */,
+				9372380A2AD0302B002B79A6 /* URLComponents+Extension.swift */,
 			);
 			path = Extenstions;
 			sourceTree = "<group>";
@@ -337,6 +343,7 @@
 			files = (
 				935159D52ACE232200458601 /* NewsListRowView.swift in Sources */,
 				935EA0902ACF5D83003EB789 /* SetDateOfNewsView.swift in Sources */,
+				9372380B2AD0302B002B79A6 /* URLComponents+Extension.swift in Sources */,
 				935159C12ACDFBBF00458601 /* DataFetcher.swift in Sources */,
 				935159D02ACE162E00458601 /* SortByOption.swift in Sources */,
 				935159CD2ACE125300458601 /* NewsViewModel.swift in Sources */,
@@ -347,6 +354,7 @@
 				935159CA2ACE054500458601 /* Repository.swift in Sources */,
 				93728DDA2AD00C2800D99303 /* TextFieldWithDebounce.swift in Sources */,
 				93728DDD2AD00F7100D99303 /* TextFieldObserver.swift in Sources */,
+				9372380D2AD03076002B79A6 /* NewsApiQueryItems.swift in Sources */,
 				935EA0952ACF875D003EB789 /* String+Extension.swift in Sources */,
 				935159B92ACDF4FD00458601 /* NewsListView.swift in Sources */,
 				935159D32ACE17B900458601 /* HomeScreenView.swift in Sources */,
@@ -413,7 +421,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -470,7 +478,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;

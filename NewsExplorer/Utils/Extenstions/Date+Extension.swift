@@ -18,6 +18,4 @@ extension Date {
         dateFormatter.timeZone = TimeZone(abbreviation: "UTC")
         return dateFormatter.string(from: self)
     }
-    
-    
 }

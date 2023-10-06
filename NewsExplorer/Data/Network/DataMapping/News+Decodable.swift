@@ -35,8 +35,4 @@ struct PieceOfNewsModel: Decodable, Identifiable {
 
 struct SourceModel: Decodable {
     let name: String?
-    
-    private enum CodingKeys: CodingKey {
-        case name
-    }
 }

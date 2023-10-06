@@ -74,6 +74,9 @@ struct SetDateOfNewsView: View {
             .frame(maxWidth: .infinity)
             .padding(.bottom, 20)
             Text("Due to API restrictions you can search news only for previous month")
+                .font(.caption)
+                .frame(alignment: .center)
+                .multilineTextAlignment(.center)
             Spacer()
         }
         .padding()

@@ -14,8 +14,8 @@ struct NewsListView: View {
     var body: some View {
         ScrollView {
             LazyVStack {
-                if let startDate = viewModel.startDate, let endDate = viewModel.endDate {
-                    Text("\(startDate.formatted(date: .abbreviated, time: .omitted)) - \(endDate.formatted(date: .abbreviated, time: .omitted))")
+                if viewModel.startDate != nil, viewModel.endDate != nil {
+                    Text(viewModel.formattedDate)
                         .frame(alignment: .center)
                         .padding()
                 }
