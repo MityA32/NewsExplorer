@@ -45,6 +45,5 @@ struct PieceOfNewsDetailsView: View {
             }
             .padding()
         }
-        
     }
 }

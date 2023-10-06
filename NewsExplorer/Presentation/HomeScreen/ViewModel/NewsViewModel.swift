@@ -71,12 +71,7 @@ final class NewsViewModel: ObservableObject {
             endDate: endDate,
             sortOption: selectedSortOption,
             pageNumber: currentPageNumber + 1)
-//        switch newsRequest {
-//            case .initial:
-//                inInitialNewsConfig.send(updatedConfig)
-//            case .custom:
         inCustomNewsConfig.send(updatedConfig)
-//        }
     }
     
     func changeNews(forNew searchText: String) {
