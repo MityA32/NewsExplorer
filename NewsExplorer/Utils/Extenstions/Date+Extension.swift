@@ -8,8 +8,8 @@
 import Foundation
 
 extension Date {
-    var yesterday: Date {
-        Calendar.current.date(byAdding: .day, value: -1, to: self) ?? self
+    var monthBefore: Date {
+        Calendar.current.date(byAdding: .day, value: -30, to: self) ?? self
     }
     
     func formatToISO8601() -> String {

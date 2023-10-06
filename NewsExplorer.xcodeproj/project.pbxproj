@@ -27,6 +27,8 @@
 		935EA0902ACF5D83003EB789 /* SetDateOfNewsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 935EA08F2ACF5D83003EB789 /* SetDateOfNewsView.swift */; };
 		935EA0932ACF685A003EB789 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 935EA0922ACF685A003EB789 /* Date+Extension.swift */; };
 		935EA0952ACF875D003EB789 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 935EA0942ACF875D003EB789 /* String+Extension.swift */; };
+		93728DDA2AD00C2800D99303 /* TextFieldWithDebounce.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93728DD92AD00C2800D99303 /* TextFieldWithDebounce.swift */; };
+		93728DDD2AD00F7100D99303 /* TextFieldObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93728DDC2AD00F7100D99303 /* TextFieldObserver.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +53,8 @@
 		935EA08F2ACF5D83003EB789 /* SetDateOfNewsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetDateOfNewsView.swift; sourceTree = "<group>"; };
 		935EA0922ACF685A003EB789 /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
 		935EA0942ACF875D003EB789 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		93728DD92AD00C2800D99303 /* TextFieldWithDebounce.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldWithDebounce.swift; sourceTree = "<group>"; };
+		93728DDC2AD00F7100D99303 /* TextFieldObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldObserver.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -210,6 +214,7 @@
 		935159D12ACE17A000458601 /* Subviews */ = {
 			isa = PBXGroup;
 			children = (
+				93728DD82AD00C1400D99303 /* HelperViews */,
 				935159B82ACDF4FD00458601 /* NewsListView.swift */,
 				935159D42ACE232200458601 /* NewsListRowView.swift */,
 				935EA08F2ACF5D83003EB789 /* SetDateOfNewsView.swift */,
@@ -228,6 +233,7 @@
 		935EA08A2ACEBCE2003EB789 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				93728DDB2AD00F6300D99303 /* CustomObservers */,
 				935EA0912ACF6842003EB789 /* Extenstions */,
 				935EA08B2ACEBCFD003EB789 /* APIKeys.swift */,
 			);
@@ -241,6 +247,22 @@
 				935EA0942ACF875D003EB789 /* String+Extension.swift */,
 			);
 			path = Extenstions;
+			sourceTree = "<group>";
+		};
+		93728DD82AD00C1400D99303 /* HelperViews */ = {
+			isa = PBXGroup;
+			children = (
+				93728DD92AD00C2800D99303 /* TextFieldWithDebounce.swift */,
+			);
+			path = HelperViews;
+			sourceTree = "<group>";
+		};
+		93728DDB2AD00F6300D99303 /* CustomObservers */ = {
+			isa = PBXGroup;
+			children = (
+				93728DDC2AD00F7100D99303 /* TextFieldObserver.swift */,
+			);
+			path = CustomObservers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -323,6 +345,8 @@
 				935159C72ACE04E900458601 /* NewsRepository.swift in Sources */,
 				935EA08C2ACEBCFD003EB789 /* APIKeys.swift in Sources */,
 				935159CA2ACE054500458601 /* Repository.swift in Sources */,
+				93728DDA2AD00C2800D99303 /* TextFieldWithDebounce.swift in Sources */,
+				93728DDD2AD00F7100D99303 /* TextFieldObserver.swift in Sources */,
 				935EA0952ACF875D003EB789 /* String+Extension.swift in Sources */,
 				935159B92ACDF4FD00458601 /* NewsListView.swift in Sources */,
 				935159D32ACE17B900458601 /* HomeScreenView.swift in Sources */,

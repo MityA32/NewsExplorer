@@ -15,7 +15,6 @@ struct NewsListRowView: View {
             Group {
                 Text(pieceOfNews.title ?? "Untitled")
                     .font(.title3)
-                
                 Text(pieceOfNews.description ?? "No description")
                     .font(.subheadline)
             }

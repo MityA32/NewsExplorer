@@ -10,12 +10,15 @@ import Combine
 
 struct NewsListView: View {
     @ObservedObject var viewModel: NewsViewModel
-    
 
-    
     var body: some View {
         ScrollView {
             LazyVStack {
+                if let startDate = viewModel.startDate, let endDate = viewModel.endDate {
+                    Text("\(startDate.formatted(date: .abbreviated, time: .omitted)) - \(endDate.formatted(date: .abbreviated, time: .omitted))")
+                        .frame(alignment: .center)
+                        .padding()
+                }
                 ForEach(viewModel.news, id: \.id) { pieceOfNews in
                     NavigationLink {
                         PieceOfNewsDetailsView(pieceOfNews: pieceOfNews)

@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Combine
 
 struct HomeScreenView: View {
     @ObservedObject var viewModel: NewsViewModel
@@ -16,23 +17,25 @@ struct HomeScreenView: View {
     var body: some View {
         VStack {
             NavigationStack {
-                NewsListView(viewModel: viewModel)
-                    .navigationTitle("News")
-                    .navigationBarTitleDisplayMode(.inline)
-                    .toolbar {
-                        topBarLeading
-                        topBarTrailing
-                    }
+                VStack {
+                    NewsListView(viewModel: viewModel)
+                        .navigationTitle("News")
+                        .navigationBarTitleDisplayMode(.inline)
+                        .toolbar {
+                            topBarLeading
+                            topBarTrailing
+                        }
+                        .padding(.top, 50)
+                }
+                .overlay {
+                    TextFieldWithDebounce(viewModel: viewModel, debouncedText: $searchText)
+                }
             }
-            
             .alert(isPresented: $viewModel.isDataMissing) {
                 Alert(title: Text("Data is missing"),
                       message: Text("Probably free calls from API are over :("))
             }
-            .searchable(text: $searchText)
-            .onChange(of: searchText, {
-                viewModel.changeNews(forNew: searchText)
-            })
+            
         }
     }
     

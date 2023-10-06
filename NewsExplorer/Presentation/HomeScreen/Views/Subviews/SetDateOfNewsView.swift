@@ -10,8 +10,9 @@ import SwiftUI
 struct SetDateOfNewsView: View {
     @ObservedObject var viewModel: NewsViewModel
     @Environment(\.dismiss) var dismiss
-    @State var startDate: Date = .now.yesterday
+    @State var startDate: Date = .now.monthBefore
     @State var endDate: Date = .now
+    var startDateConstraint: Date = .now.monthBefore
     
     var body: some View {
         VStack(spacing: 10) {
@@ -32,11 +33,11 @@ struct SetDateOfNewsView: View {
                 Group {
                     DatePicker("Start Date",
                                selection: $startDate,
-                               in: ...endDate,
+                               in: startDateConstraint...endDate,
                                displayedComponents: [.date, .hourAndMinute])
                     DatePicker("End Date",
                                selection: $endDate,
-                               in: ...Date(),
+                               in: startDateConstraint...Date(),
                                displayedComponents: [.date, .hourAndMinute])
                 }
                 .padding(5)
@@ -72,13 +73,7 @@ struct SetDateOfNewsView: View {
             }
             .frame(maxWidth: .infinity)
             .padding(.bottom, 20)
-            if let startDate = viewModel.startDate, let endDate = viewModel.endDate {
-                Text("News from \(startDate.formatted(date: .complete, time: .omitted)) to \(endDate.formatted(date: .complete, time: .omitted))")
-                    .frame(alignment: .center)
-            } else {
-                Text("No time limits for News are set")
-                    .frame(alignment: .center)
-            }
+            Text("Due to API restrictions you can search news only for previous month")
             Spacer()
         }
         .padding()

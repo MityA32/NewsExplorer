@@ -11,10 +11,7 @@ import Combine
 final class NewsRepository: NSObject, Repository {
     typealias T = PieceOfNewsModel
     let fetcher: Fetcher
-    
-//    private(set) var data = [PieceOfNewsModel]()
-    
-    let inInitialNewsConfig = PassthroughSubject<NewsRequestConfig, Never>()
+
     let inCustomNewsConfig = PassthroughSubject<NewsRequestConfig, Never>()
     let outNewsList = PassthroughSubject<Result<[PieceOfNewsModel], Error>, Never>()
     
@@ -25,30 +22,12 @@ final class NewsRepository: NSObject, Repository {
         self.fetcher = fetcher
         super.init()
         
-        inInitialNewsConfig
-            .filter { $0.pageNumber != 0 }
+        inCustomNewsConfig
+            .removeDuplicates()
             .sink(receiveValue: { [weak self] config in
                 guard let self else { return }
                 Task {
-                    print(config)
-                    let result = await self.getPortion(
-                        topic: config.topic,
-                        from: config.startDate,
-                        to: config.endDate,
-                        sortByOption: config.sortOption,
-                        pageNumber: config.pageNumber
-                    )
-                    self.outNewsList.send(result)
-                }
-            })
-            .store(in: &cancellables)
-        
-        inCustomNewsConfig
-            .filter { $0.pageNumber != 0 }
-            .debounce(for: .seconds(1), scheduler: RunLoop.main)
-            .sink(receiveValue: { [weak self] config in
-                guard let self, config.pageNumber != 0 else { return }
-                Task {
+                    print("incustom")
                     print(config)
                     let result = await self.getPortion(
                         topic: config.topic,
@@ -72,7 +51,7 @@ final class NewsRepository: NSObject, Repository {
         
         switch await fetcher.fetchData(of: NewsModel.self, with: url) {
             case .success(let news):
-                return .success(news.articles)
+                return .success(news.articles.filter { !($0.title?.contains("[Removed]") ?? false)})
             case .failure(let error):
                 print(error.localizedDescription)
                 return .failure(error)

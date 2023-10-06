@@ -27,20 +27,12 @@ final class NewsViewModel: ObservableObject {
     private var currentTopic = "popular"
     private var currentPageNumber = 0
     
-    let inInitialNewsConfig = PassthroughSubject<NewsRequestConfig, Never>()
     let inCustomNewsConfig = PassthroughSubject<NewsRequestConfig, Never>()
     let outNewsList = PassthroughSubject<[PieceOfNewsModel], Never>()
     private var cancellables = Set<AnyCancellable>()
     
     init(newsRepository: Repository) {
         self.newsRepository = newsRepository
-        
-        inInitialNewsConfig
-            .sink(
-                receiveValue: { [weak self] config in
-                    self?.newsRepository.inInitialNewsConfig.send(config)
-            })
-            .store(in: &cancellables)
         
         inCustomNewsConfig
             .sink(
@@ -53,25 +45,23 @@ final class NewsViewModel: ObservableObject {
             .outNewsList
             .receive(on: DispatchQueue.main)
             .sink(receiveValue: { [weak self] result in
+                guard let self else { return }
                 switch result {
                 case .success(let data):
-                    self?.currentPageNumber += 1
-                    self?.news += data
+                    if currentPageNumber == 0 {
+                        self.news = data
+                    } else {
+                        self.news += data
+                    }
+                    
+                    self.currentPageNumber += 1
+                    
                 case .failure(_):
-                    self?.isDataMissing = true
+                    self.isDataMissing = true
                     break
                 }
             })
             .store(in: &cancellables)
-    }
-    
-    func changeNews(forNew searchText: String) {
-        news = []
-        newsRequest = .custom
-        currentPageNumber = 0
-        currentTopic = searchText.isEmpty ? "popular" : searchText
-        let config = NewsRequestConfig(topic: currentTopic, startDate: startDate, endDate: endDate, sortOption: selectedSortOption, pageNumber: currentPageNumber)
-        inCustomNewsConfig.send(config)
     }
     
     func loadMore() {
@@ -81,70 +71,43 @@ final class NewsViewModel: ObservableObject {
             endDate: endDate,
             sortOption: selectedSortOption,
             pageNumber: currentPageNumber + 1)
-        switch newsRequest {
-            case .initial:
-                inInitialNewsConfig.send(updatedConfig)
-            case .custom:
-                inCustomNewsConfig.send(updatedConfig)
-        }
+//        switch newsRequest {
+//            case .initial:
+//                inInitialNewsConfig.send(updatedConfig)
+//            case .custom:
+        inCustomNewsConfig.send(updatedConfig)
+//        }
+    }
+    
+    func changeNews(forNew searchText: String) {
+        guard searchText != currentTopic else { return }
+        newsRequest = .custom
+        currentPageNumber = 0
+        currentTopic = searchText.isEmpty ? "popular" : searchText
+        loadMore()
     }
     
     func selectSortBy(_ option: SortByOption) {
         if selectedSortOption == option {
             return
         }
-        news = []
         selectedSortOption = option
         currentPageNumber = 0
-        let updatedConfig = NewsRequestConfig(
-            topic: currentTopic,
-            startDate: startDate,
-            endDate: endDate,
-            sortOption: selectedSortOption,
-            pageNumber: currentPageNumber)
-        switch newsRequest {
-            case .initial:
-                inInitialNewsConfig.send(updatedConfig)
-            case .custom:
-                inCustomNewsConfig.send(updatedConfig)
-        }
+        loadMore()
     }
     
     func setDateLimits(startDate: Date, endDate: Date) {
-        news = []
         currentPageNumber = 0
         self.startDate = startDate
         self.endDate = endDate
-        let updatedConfig = NewsRequestConfig(
-            topic: currentTopic,
-            startDate: startDate,
-            endDate: endDate,
-            sortOption: selectedSortOption,
-            pageNumber: currentPageNumber)
-        switch newsRequest {
-            case .initial:
-                inInitialNewsConfig.send(updatedConfig)
-            case .custom:
-                inCustomNewsConfig.send(updatedConfig)
-        }
+        loadMore()
     }
     
     func discardDateLimits() {
-        news = []
+        guard startDate != nil, endDate != nil else { return }
         currentPageNumber = 0
-        self.startDate = nil
-        self.endDate = nil
-        let updatedConfig = NewsRequestConfig(
-            topic: currentTopic,
-            startDate: startDate,
-            endDate: endDate,
-            sortOption: selectedSortOption,
-            pageNumber: currentPageNumber)
-        switch newsRequest {
-            case .initial:
-                inInitialNewsConfig.send(updatedConfig)
-            case .custom:
-                inCustomNewsConfig.send(updatedConfig)
-        }
+        startDate = nil
+        endDate = nil
+        loadMore()
     }
 }

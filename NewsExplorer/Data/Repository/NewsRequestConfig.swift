@@ -7,11 +7,10 @@
 
 import Foundation
 
-struct NewsRequestConfig {
+struct NewsRequestConfig: Equatable {
     let topic: String
     let startDate: Date?
     let endDate: Date?
     let sortOption: SortByOption
-    var pageNumber: Int
-    
+    var pageNumber: Int 
 }
