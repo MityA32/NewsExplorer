@@ -15,11 +15,13 @@ struct NewsListRowView: View {
             Group {
                 Text(pieceOfNews.title ?? "Untitled")
                     .font(.title3)
+                
                 Text(pieceOfNews.description ?? "No description")
                     .font(.subheadline)
             }
             .minimumScaleFactor(0.5)
             .frame(maxWidth: .infinity, alignment: .leading)
+            .multilineTextAlignment(.leading)
         }
     }
 }

@@ -8,7 +8,43 @@
 import SwiftUI
 
 struct PieceOfNewsDetailsView: View {
+    let pieceOfNews: PieceOfNewsModel
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ScrollView {
+            LazyVStack {
+                Group {
+                    Text(pieceOfNews.title ?? "Untiled")
+                        .bold()
+                        .font(.title2)
+                    Divider()
+                    Text(pieceOfNews.author ?? "Unknown author")
+                        .font(.headline)
+                    Text(pieceOfNews.publishedAt?.formattedFromISO8601() ?? "Unknown date")
+                        .font(.caption)
+                    VStack(alignment: .leading) {
+                        AsyncImage(url: URL(string: pieceOfNews.urlToImage ?? "")) { image in
+                            image
+                                .resizable()
+                                .scaledToFit()
+                                .frame(maxWidth: .infinity)
+                                
+                        } placeholder: {
+                            ProgressView()
+                        }
+                        Text("Source: \(pieceOfNews.source?.name ?? "unknown")")
+                            .font(.caption)
+                    }
+                    .padding()
+                    Text(pieceOfNews.description ?? "No description")
+                        .font(.body)
+                }
+                .frame(maxWidth: .infinity, alignment: .leading)
+                .multilineTextAlignment(.leading)
+                Spacer()
+            }
+            .padding()
+        }
+        
     }
 }

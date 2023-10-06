@@ -7,49 +7,128 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "33B25136-680C-491A-8690-DB906079D5D0"
+            uuid = "B74A3FDB-6CC3-4EFB-9369-BE7320E2953C"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NewsExplorer/Presentation/HomeScreen/ViewModel/NewsViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "59"
+            endingLineNumber = "59"
+            landmarkName = "init(newsRepository:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C3DA124A-4618-4354-B498-698497F3FA8D"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NewsExplorer/Presentation/HomeScreen/ViewModel/NewsViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "61"
+            endingLineNumber = "61"
+            landmarkName = "init(newsRepository:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "12FCAC40-B123-4C11-9743-CDB582CF9660"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "NewsExplorer/Data/Repository/NewsRepository.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "41"
-            endingLineNumber = "41"
-            landmarkName = "init(fetcher:)"
+            startingLineNumber = "73"
+            endingLineNumber = "73"
+            landmarkName = "getPortion(topic:from:to:sortByOption:pageNumber:)"
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "33B25136-680C-491A-8690-DB906079D5D0 - e13b6879df00fd99"
+                  uuid = "12FCAC40-B123-4C11-9743-CDB582CF9660 - 3311812d12b44139"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "(2) suspend resume partial function for closure #1 @Sendable () async -&gt; () in closure #1 (NewsExplorer.NewsRequestConfig) -&gt; () in NewsExplorer.NewsRepository.init(fetcher: NewsExplorer.Fetcher) -&gt; NewsExplorer.NewsRepository"
+                  symbolName = "(1) suspend resume partial function for NewsExplorer.NewsRepository.getPortion(topic: Swift.String, from: Swift.Optional&lt;Foundation.Date&gt;, to: Swift.Optional&lt;Foundation.Date&gt;, sortByOption: NewsExplorer.SortByOption, pageNumber: Swift.Int) async -&gt; Swift.Result&lt;Swift.Array&lt;NewsExplorer.PieceOfNewsModel&gt;, Swift.Error&gt;"
                   moduleName = "NewsExplorer"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/dmytrohetman/projects/NewsExplorer/NewsExplorer/Data/Repository/NewsRepository.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "38"
-                  endingLineNumber = "38"
-                  offsetFromSymbolStart = "135">
+                  startingLineNumber = "73"
+                  endingLineNumber = "73"
+                  offsetFromSymbolStart = "2491">
                </Location>
                <Location
-                  uuid = "33B25136-680C-491A-8690-DB906079D5D0 - 8cf2e621bea1c77f"
+                  uuid = "12FCAC40-B123-4C11-9743-CDB582CF9660 - f3f03e85b6e600f1"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "(3) suspend resume partial function for closure #1 @Sendable () async -&gt; () in closure #1 (NewsExplorer.NewsRequestConfig) -&gt; () in NewsExplorer.NewsRepository.init(fetcher: NewsExplorer.Fetcher) -&gt; NewsExplorer.NewsRepository"
+                  symbolName = "(2) await resume partial function for NewsExplorer.NewsRepository.getPortion(topic: Swift.String, from: Swift.Optional&lt;Foundation.Date&gt;, to: Swift.Optional&lt;Foundation.Date&gt;, sortByOption: NewsExplorer.SortByOption, pageNumber: Swift.Int) async -&gt; Swift.Result&lt;Swift.Array&lt;NewsExplorer.PieceOfNewsModel&gt;, Swift.Error&gt;"
                   moduleName = "NewsExplorer"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/dmytrohetman/projects/NewsExplorer/NewsExplorer/Data/Repository/NewsRepository.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "39"
-                  endingLineNumber = "39"
-                  offsetFromSymbolStart = "144">
+                  startingLineNumber = "73"
+                  endingLineNumber = "73"
+                  offsetFromSymbolStart = "34">
+               </Location>
+               <Location
+                  uuid = "12FCAC40-B123-4C11-9743-CDB582CF9660 - 34e72ac978ef0527"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for NewsExplorer.NewsRepository.getPortion(topic: Swift.String, from: Swift.Optional&lt;Foundation.Date&gt;, to: Swift.Optional&lt;Foundation.Date&gt;, sortByOption: NewsExplorer.SortByOption, pageNumber: Swift.Int) async -&gt; Swift.Result&lt;Swift.Array&lt;NewsExplorer.PieceOfNewsModel&gt;, Swift.Error&gt;"
+                  moduleName = "NewsExplorer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dmytrohetman/projects/NewsExplorer/NewsExplorer/Data/Repository/NewsRepository.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "73"
+                  endingLineNumber = "73"
+                  offsetFromSymbolStart = "212">
                </Location>
             </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "18C7BFE6-D8F8-414A-8B45-779238E6151B"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NewsExplorer/Data/Repository/NewsRepository.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "69"
+            endingLineNumber = "69"
+            landmarkName = "getPortion(topic:from:to:sortByOption:pageNumber:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B6B6B268-E468-4D47-9A50-55B812897FE3"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NewsExplorer/Data/Repository/NewsRepository.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "75"
+            endingLineNumber = "75"
+            landmarkName = "getPortion(topic:from:to:sortByOption:pageNumber:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

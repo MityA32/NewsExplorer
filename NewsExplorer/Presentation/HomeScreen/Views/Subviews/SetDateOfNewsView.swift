@@ -10,7 +10,7 @@ import SwiftUI
 struct SetDateOfNewsView: View {
     @ObservedObject var viewModel: NewsViewModel
     @Environment(\.dismiss) var dismiss
-    @State var startDate: Date = .now
+    @State var startDate: Date = .now.yesterday
     @State var endDate: Date = .now
     
     var body: some View {
@@ -71,6 +71,14 @@ struct SetDateOfNewsView: View {
                 .padding(.trailing, 20)
             }
             .frame(maxWidth: .infinity)
+            .padding(.bottom, 20)
+            if let startDate = viewModel.startDate, let endDate = viewModel.endDate {
+                Text("News from \(startDate.formatted(date: .complete, time: .omitted)) to \(endDate.formatted(date: .complete, time: .omitted))")
+                    .frame(alignment: .center)
+            } else {
+                Text("No time limits for News are set")
+                    .frame(alignment: .center)
+            }
             Spacer()
         }
         .padding()

@@ -21,12 +21,12 @@
 		935159D02ACE162E00458601 /* SortByOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 935159CF2ACE162E00458601 /* SortByOption.swift */; };
 		935159D32ACE17B900458601 /* HomeScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 935159D22ACE17B900458601 /* HomeScreenView.swift */; };
 		935159D52ACE232200458601 /* NewsListRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 935159D42ACE232200458601 /* NewsListRowView.swift */; };
-		935159D72ACE2B7900458601 /* ControlPanelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 935159D62ACE2B7900458601 /* ControlPanelView.swift */; };
 		935159DA2ACE3FD900458601 /* PieceOfNewsDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 935159D92ACE3FD900458601 /* PieceOfNewsDetailsView.swift */; };
 		935EA08C2ACEBCFD003EB789 /* APIKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 935EA08B2ACEBCFD003EB789 /* APIKeys.swift */; };
 		935EA08E2ACF2B25003EB789 /* NewsRequestConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 935EA08D2ACF2B25003EB789 /* NewsRequestConfig.swift */; };
 		935EA0902ACF5D83003EB789 /* SetDateOfNewsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 935EA08F2ACF5D83003EB789 /* SetDateOfNewsView.swift */; };
-		935EA0932ACF685A003EB789 /* Date+Extenstion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 935EA0922ACF685A003EB789 /* Date+Extenstion.swift */; };
+		935EA0932ACF685A003EB789 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 935EA0922ACF685A003EB789 /* Date+Extension.swift */; };
+		935EA0952ACF875D003EB789 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 935EA0942ACF875D003EB789 /* String+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,12 +45,12 @@
 		935159CF2ACE162E00458601 /* SortByOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortByOption.swift; sourceTree = "<group>"; };
 		935159D22ACE17B900458601 /* HomeScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenView.swift; sourceTree = "<group>"; };
 		935159D42ACE232200458601 /* NewsListRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsListRowView.swift; sourceTree = "<group>"; };
-		935159D62ACE2B7900458601 /* ControlPanelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlPanelView.swift; sourceTree = "<group>"; };
 		935159D92ACE3FD900458601 /* PieceOfNewsDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieceOfNewsDetailsView.swift; sourceTree = "<group>"; };
 		935EA08B2ACEBCFD003EB789 /* APIKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKeys.swift; sourceTree = "<group>"; };
 		935EA08D2ACF2B25003EB789 /* NewsRequestConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsRequestConfig.swift; sourceTree = "<group>"; };
 		935EA08F2ACF5D83003EB789 /* SetDateOfNewsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetDateOfNewsView.swift; sourceTree = "<group>"; };
-		935EA0922ACF685A003EB789 /* Date+Extenstion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extenstion.swift"; sourceTree = "<group>"; };
+		935EA0922ACF685A003EB789 /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
+		935EA0942ACF875D003EB789 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -212,7 +212,6 @@
 			children = (
 				935159B82ACDF4FD00458601 /* NewsListView.swift */,
 				935159D42ACE232200458601 /* NewsListRowView.swift */,
-				935159D62ACE2B7900458601 /* ControlPanelView.swift */,
 				935EA08F2ACF5D83003EB789 /* SetDateOfNewsView.swift */,
 			);
 			path = Subviews;
@@ -238,7 +237,8 @@
 		935EA0912ACF6842003EB789 /* Extenstions */ = {
 			isa = PBXGroup;
 			children = (
-				935EA0922ACF685A003EB789 /* Date+Extenstion.swift */,
+				935EA0922ACF685A003EB789 /* Date+Extension.swift */,
+				935EA0942ACF875D003EB789 /* String+Extension.swift */,
 			);
 			path = Extenstions;
 			sourceTree = "<group>";
@@ -319,11 +319,11 @@
 				935159D02ACE162E00458601 /* SortByOption.swift in Sources */,
 				935159CD2ACE125300458601 /* NewsViewModel.swift in Sources */,
 				935159A82ACDF3A400458601 /* ContentView.swift in Sources */,
-				935EA0932ACF685A003EB789 /* Date+Extenstion.swift in Sources */,
+				935EA0932ACF685A003EB789 /* Date+Extension.swift in Sources */,
 				935159C72ACE04E900458601 /* NewsRepository.swift in Sources */,
 				935EA08C2ACEBCFD003EB789 /* APIKeys.swift in Sources */,
 				935159CA2ACE054500458601 /* Repository.swift in Sources */,
-				935159D72ACE2B7900458601 /* ControlPanelView.swift in Sources */,
+				935EA0952ACF875D003EB789 /* String+Extension.swift in Sources */,
 				935159B92ACDF4FD00458601 /* NewsListView.swift in Sources */,
 				935159D32ACE17B900458601 /* HomeScreenView.swift in Sources */,
 				935159BE2ACDF65F00458601 /* News+Decodable.swift in Sources */,

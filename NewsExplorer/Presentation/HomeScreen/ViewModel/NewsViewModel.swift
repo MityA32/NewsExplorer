@@ -68,7 +68,7 @@ final class NewsViewModel: ObservableObject {
     func changeNews(forNew searchText: String) {
         news = []
         newsRequest = .custom
-        currentPageNumber = searchText.isEmpty ? 0 : 1
+        currentPageNumber = 0
         currentTopic = searchText.isEmpty ? "popular" : searchText
         let config = NewsRequestConfig(topic: currentTopic, startDate: startDate, endDate: endDate, sortOption: selectedSortOption, pageNumber: currentPageNumber)
         inCustomNewsConfig.send(config)
