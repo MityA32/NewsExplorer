@@ -10,8 +10,8 @@ import SwiftUI
 struct SetDateOfNewsView: View {
     @ObservedObject var viewModel: NewsViewModel
     @Environment(\.dismiss) var dismiss
-    @State var startDate: Date = .now.monthBefore
-    @State var endDate: Date = .now
+    @State private var startDate: Date = .now.monthBefore
+    @State private var endDate: Date = .now
     var startDateConstraint: Date = .now.monthBefore
     
     var body: some View {

@@ -31,8 +31,7 @@ struct NewsListView: View {
                             .background(
                                 RoundedRectangle(cornerRadius: 5)
                                     .foregroundStyle(Color(cgColor: UIColor.systemGray6.cgColor))
-                            )
-                        
+                            )   
                     }
                 }
                 .padding(.horizontal, 20)

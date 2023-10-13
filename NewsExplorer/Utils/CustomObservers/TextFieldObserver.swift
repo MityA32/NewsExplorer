@@ -21,7 +21,7 @@ final class TextFieldObserver: ObservableObject {
             .debounce(for: .seconds(1), scheduler: DispatchQueue.main)
             .sink(receiveValue: { [weak self] in
                 self?.debouncedText = $0
-            } )
+            })
             .store(in: &subscriptions)
     }
 }

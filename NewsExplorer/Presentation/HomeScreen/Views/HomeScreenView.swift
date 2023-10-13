@@ -12,7 +12,6 @@ struct HomeScreenView: View {
     @ObservedObject var viewModel: NewsViewModel
     @State private var isDateSelectionShown = false
     @State private var searchText = ""
-    @State private var isDataMissing = false
     
     var body: some View {
         VStack {
